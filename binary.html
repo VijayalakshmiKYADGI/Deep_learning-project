@@ -1,0 +1,47 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<style>
+body{
+    background-image:url("image.jpeg")
+}
+h1{
+    color:blue;
+    font-family:cursive;
+    font-size: 40px;
+    font-weight: bold;
+}
+h2
+{
+    font-family:cursive;
+    font-size: 40px;
+    font-weight: bold;
+    background-repeat:no-repeat;
+    background-color:yellow
+}
+
+
+</style>
+<body >
+    <center>
+<h1>PREDICT FOOTBALL/CRICKET PLAYER</h1>
+
+<br/>
+<br></br>
+<br></br>
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token%}
+    <input type="file" class="btn btn-outline-danger" name="myfile">
+    <br/>
+    <br/>
+    <button type="submit" class="btn btn-outline-success">UPLOAD</button>
+    <br/> 
+    <br></br>
+    
+   
+    <h2>
+    {{result}}</h2>
+</center>
+</body>
+{% endblock %}
